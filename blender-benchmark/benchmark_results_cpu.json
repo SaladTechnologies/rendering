@@ -1,0 +1,197 @@
+[
+  {
+    "timestamp": "2025-09-01T21:47:08.151532+00:00",
+    "blender_version": {
+      "version": "4.5.0",
+      "build_date": "2025-07-15",
+      "build_time": "01:36:28",
+      "build_commit_date": "2025-07-14",
+      "build_commit_time": "17:45",
+      "build_hash": "8cb6b388974a",
+      "label": "4.5.0",
+      "checksum": "1188b95cc12321c770b631939f7c25a096910b6f884a990bf9c0f62d52b38aec"
+    },
+    "benchmark_launcher": {
+      "label": "3.1.0",
+      "checksum": "d2504fddc513b6b1ccbf18cb75aa381d21a543fe4662d790f24aa7275fa255e9"
+    },
+    "benchmark_script": {
+      "label": "3.1.1",
+      "checksum": "5a706e14279da13b2bed2dbb9e0a47c2588b9ea4f37cf8f9c7d79c8b7c634c1f"
+    },
+    "scene": {
+      "label": "monster",
+      "checksum": "8ff812a02f720433de1403dab447be9541eecca71cc919224a7790d017c1b2ce"
+    },
+    "system_info": {
+      "bitness": "64bit",
+      "machine": "x86_64",
+      "system": "Linux",
+      "dist_name": "Ubuntu",
+      "dist_version": "22.04",
+      "devices": [
+        {
+          "type": "CPU",
+          "name": "11th Gen Intel Core i7-11800H @ 2.30GHz"
+        },
+        {
+          "type": "CUDA",
+          "name": "NVIDIA RTX A2000 Laptop GPU",
+          "is_display": false
+        }
+      ],
+      "num_cpu_sockets": 1,
+      "num_cpu_cores": 8,
+      "num_cpu_threads": 16
+    },
+    "device_info": {
+      "device_type": "CPU",
+      "compute_devices": [
+        {
+          "type": "CPU",
+          "name": "11th Gen Intel Core i7-11800H @ 2.30GHz"
+        }
+      ],
+      "num_cpu_threads": 16
+    },
+    "stats": {
+      "device_peak_memory": 634.34,
+      "number_of_samples": 36,
+      "time_for_samples": 30.719779,
+      "samples_per_minute": 70.31300583249639,
+      "total_render_time": 32.2895,
+      "render_time_no_sync": 30.72,
+      "time_limit": 30
+    }
+  },
+  {
+    "timestamp": "2025-09-01T21:47:59.534703+00:00",
+    "blender_version": {
+      "version": "4.5.0",
+      "build_date": "2025-07-15",
+      "build_time": "01:36:28",
+      "build_commit_date": "2025-07-14",
+      "build_commit_time": "17:45",
+      "build_hash": "8cb6b388974a",
+      "label": "4.5.0",
+      "checksum": "1188b95cc12321c770b631939f7c25a096910b6f884a990bf9c0f62d52b38aec"
+    },
+    "benchmark_launcher": {
+      "label": "3.1.0",
+      "checksum": "d2504fddc513b6b1ccbf18cb75aa381d21a543fe4662d790f24aa7275fa255e9"
+    },
+    "benchmark_script": {
+      "label": "3.1.1",
+      "checksum": "5a706e14279da13b2bed2dbb9e0a47c2588b9ea4f37cf8f9c7d79c8b7c634c1f"
+    },
+    "scene": {
+      "label": "junkshop",
+      "checksum": "f5515a21a1337b908212d8d76733530df83014464a24c585ab7b96000da0cdce"
+    },
+    "system_info": {
+      "bitness": "64bit",
+      "machine": "x86_64",
+      "system": "Linux",
+      "dist_name": "Ubuntu",
+      "dist_version": "22.04",
+      "devices": [
+        {
+          "type": "CPU",
+          "name": "11th Gen Intel Core i7-11800H @ 2.30GHz"
+        },
+        {
+          "type": "CUDA",
+          "name": "NVIDIA RTX A2000 Laptop GPU",
+          "is_display": false
+        }
+      ],
+      "num_cpu_sockets": 1,
+      "num_cpu_cores": 8,
+      "num_cpu_threads": 16
+    },
+    "device_info": {
+      "device_type": "CPU",
+      "compute_devices": [
+        {
+          "type": "CPU",
+          "name": "11th Gen Intel Core i7-11800H @ 2.30GHz"
+        }
+      ],
+      "num_cpu_threads": 16
+    },
+    "stats": {
+      "device_peak_memory": 4776.35,
+      "number_of_samples": 23,
+      "time_for_samples": 31.037677,
+      "samples_per_minute": 44.46209038131301,
+      "total_render_time": 38.5073,
+      "render_time_no_sync": 31.0379,
+      "time_limit": 30
+    }
+  },
+  {
+    "timestamp": "2025-09-01T21:48:40.284791+00:00",
+    "blender_version": {
+      "version": "4.5.0",
+      "build_date": "2025-07-15",
+      "build_time": "01:36:28",
+      "build_commit_date": "2025-07-14",
+      "build_commit_time": "17:45",
+      "build_hash": "8cb6b388974a",
+      "label": "4.5.0",
+      "checksum": "1188b95cc12321c770b631939f7c25a096910b6f884a990bf9c0f62d52b38aec"
+    },
+    "benchmark_launcher": {
+      "label": "3.1.0",
+      "checksum": "d2504fddc513b6b1ccbf18cb75aa381d21a543fe4662d790f24aa7275fa255e9"
+    },
+    "benchmark_script": {
+      "label": "3.1.1",
+      "checksum": "5a706e14279da13b2bed2dbb9e0a47c2588b9ea4f37cf8f9c7d79c8b7c634c1f"
+    },
+    "scene": {
+      "label": "classroom",
+      "checksum": "936f0a528f03eba291c67ea87743a0ebde58938fb87471b262721b89b46b875d"
+    },
+    "system_info": {
+      "bitness": "64bit",
+      "machine": "x86_64",
+      "system": "Linux",
+      "dist_name": "Ubuntu",
+      "dist_version": "22.04",
+      "devices": [
+        {
+          "type": "CPU",
+          "name": "11th Gen Intel Core i7-11800H @ 2.30GHz"
+        },
+        {
+          "type": "CUDA",
+          "name": "NVIDIA RTX A2000 Laptop GPU",
+          "is_display": false
+        }
+      ],
+      "num_cpu_sockets": 1,
+      "num_cpu_cores": 8,
+      "num_cpu_threads": 16
+    },
+    "device_info": {
+      "device_type": "CPU",
+      "compute_devices": [
+        {
+          "type": "CPU",
+          "name": "11th Gen Intel Core i7-11800H @ 2.30GHz"
+        }
+      ],
+      "num_cpu_threads": 16
+    },
+    "stats": {
+      "device_peak_memory": 648.57,
+      "number_of_samples": 17,
+      "time_for_samples": 34.471201,
+      "samples_per_minute": 29.589917682299493,
+      "total_render_time": 34.8937,
+      "render_time_no_sync": 34.4714,
+      "time_limit": 30
+    }
+  }
+]

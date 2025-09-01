@@ -1,0 +1,65 @@
+
+# List available devices for benchmarking and rendering
+
+blender -b --python-expr "import bpy; prefs=bpy.context.preferences.addons['cycles'].preferences; print('CPU:', [d.name for d in prefs.get_devices_for_type('CPU')], 'CUDA:', [d.name for d in prefs.get_devices_for_type('CUDA') if d.type=='CUDA'], 'OPTIX:', [d.name for d in prefs.get_devices_for_type('OPTIX') if d.type=='OPTIX'])"
+
+# Standard benchmark using 'benchmark-launcher-cli': CPU and CUDA   
+
+./benchmark-launcher-cli devices --blender-version 4.5.0
+
+./benchmark-launcher-cli scenes download --blender-version 4.5.0 monster junkshop classroom
+
+./benchmark-launcher-cli benchmark --blender-version 4.5.0 --device-type CPU --json monster junkshop classroom
+./benchmark-launcher-cli benchmark --blender-version 4.5.0 --device-type CUDA --json monster junkshop classroom
+
+./benchmark-launcher-cli benchmark --blender-version 4.5.0 --device-type CUDA --json monster 
+./benchmark-launcher-cli benchmark --blender-version 4.5.0 --device-type OPTIX --json monster 
+
+# Custom benchmark: CUDA
+
+blender -b ~/.cache/blender-benchmark-launcher/scenes/936f0a528f03eba291c67ea87743a0ebde58938fb87471b262721b89b46b875d/classroom/main.blend -o output/classroom/frame_##### -F PNG -f 1 -- --cycles-device CUDA
+blender -b ~/.cache/blender-benchmark-launcher/scenes/8ff812a02f720433de1403dab447be9541eecca71cc919224a7790d017c1b2ce/monster/main.blend -o output/monster/frame_##### -F PNG -f 1 -- --cycles-device CUDA
+blender -b ~/.cache/blender-benchmark-launcher/scenes/f5515a21a1337b908212d8d76733530df83014464a24c585ab7b96000da0cdce/junkshop/main.blend -o output/junkshop/frame_##### -F PNG -f 1 -- --cycles-device CUDA
+
+blender -b ~/.cache/blender-benchmark-launcher/scenes/936f0a528f03eba291c67ea87743a0ebde58938fb87471b262721b89b46b875d/classroom/main.blend -o output/classroom/frame_##### -F PNG -f 1 -- --cycles-device CPU
+blender -b ~/.cache/blender-benchmark-launcher/scenes/8ff812a02f720433de1403dab447be9541eecca71cc919224a7790d017c1b2ce/monster/main.blend -o output/monster/frame_##### -F PNG -f 1 -- --cycles-device CPU
+blender -b ~/.cache/blender-benchmark-launcher/scenes/f5515a21a1337b908212d8d76733530df83014464a24c585ab7b96000da0cdce/junkshop/main.blend -o output/junkshop/frame_##### -F PNG -f 1 -- --cycles-device CPU
+
+# Build Image
+
+docker image build -t docker.io/saladtechnologies/blender:001-bench -f Dockerfile .
+docker push  docker.io/saladtechnologies/blender:001-bench 
+
+# Local Test
+
+docker run --rm --gpus all -it \
+  -e SALAD_MACHINE_ID="wsl" \
+  docker.io/saladtechnologies/blender:001-bench 
+
+# Using Only 1 GPU for benchmark in Multi-GPU Systems
+
+docker run --rm --gpus all -it \
+  -e SALAD_MACHINE_ID="wsl" \
+  -e CUDA_VISIBLE_DEVICES="0" \
+  docker.io/saladtechnologies/blender:001-bench 
+
+# local test using JupyterLab
+
+docker run --rm --gpus all -it \
+  -e SALAD_MACHINE_ID="wsl" \
+  -p 8888:8888 \
+  docker.io/saladtechnologies/blender:001-bench ./start.sh
+
+# Deployment on SaladCloud: 6 Environment Variables 
+
+BENCHMARK_ID: ******
+REPORTING_API_URL: ******
+REPORTING_AUTH_HEADER: ******
+REPORTING_API_KEY: ******
+DEVICE: CUDA (or CPU)
+CUDA_VISIBLE_DEVICES: 0
+
+# Deployment on SaladCloud: Resource Type
+
+Consumer GPUs: 16 vCPUs, 16 GB RAM, all GPU models with ≥ 8 GB VRAM
+Data Center GPUs: 32 vCPUs, 256 GB RAM, all GPU models 
