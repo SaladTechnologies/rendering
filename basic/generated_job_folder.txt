@@ -1,0 +1,79 @@
+
+ubuntu@wsl-thinkpad:~/local_classroom$ tree
+.
+├── main.blend
+├── assets
+│   ├── books
+│   │   ├── books.blend
+│   │   └── textures
+│   │       └── zapBook.jpg
+│   ├── chairs
+│   │   └── chairs.blend
+│   ├── coatStand
+│   │   └── coatStand.blend
+│   ├── desks
+│   │   └── desks.blend
+│   ├── dustBin
+│   │   ├── dustBin.blend
+│   │   └── textures
+│   │       └── dustbin_wireframe.png
+│   ├── __ENV
+│   │   └── Garage
+│   │       └── Garage.hdr
+│   ├── lamps
+│   │   └── lamps.blend
+│   ├── officeSupplies
+│   │   ├── officeSupplies.blend
+│   │   └── textures
+│   │       ├── eraser.jpg
+│   │       ├── pencil_brandMask.png
+│   │       ├── pencil_colorMask.png
+│   │       ├── pencil_color.png
+│   │       └── pencil_glossyMask.png
+│   ├── radiator
+│   │   ├── radiator.blend
+│   │   └── textures
+│   │       └── radiator_AO.png
+│   ├── suitcase
+│   │   └── suitcase.blend
+│   ├── wallClock
+│   │   ├── textures
+│   │   │   └── wallClock.png
+│   │   └── wallClock.blend
+│   └── wastes
+│       ├── textures
+│       │   ├── crinkledPaper_02.png
+│       │   ├── crinkledPaper_03.png
+│       │   └── crinkledPaper.png
+│       └── wastes.blend
+└── textures
+    ├── _baseTextures
+    │   ├── base_bareMetal.png
+    │   ├── base_bluredMetal.png
+    │   ├── base_brightWood.png
+    │   ├── base_brownWood.jpg
+    │   ├── base_darkWood.png
+    │   ├── base_frostedGlass.png
+    │   ├── base_leather.jpg
+    │   ├── base_paintedPlasterWall.jpg
+    │   ├── base_paper_01.png
+    │   ├── base_scratch.jpg
+    │   ├── base_wallPaint.jpg
+    │   └── base_woodFloor.jpg
+    ├── blackBoard.png
+    ├── ceilingAirVent_AO.png
+    ├── ceiling_AO.png
+    ├── childDrawing
+    │   ├── childDrawing_01.jpg
+    │   ├── childDrawing_03.jpg
+    │   ├── childDrawing_04.jpg
+    │   ├── childDrawing_05.jpg
+    │   ├── childDrawing_06.jpg
+    │   ├── childDrawing_07.png
+    │   └── childDrawing_08.png
+    ├── cork.jpg
+    ├── europeMap.png
+    ├── livre2
+    └── woodPlanks.jpg
+
+24 directories, 50 files
